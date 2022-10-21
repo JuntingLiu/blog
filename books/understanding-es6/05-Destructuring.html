@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>解构：使数据访问更便捷 | 修</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="一步一步，似魔鬼的步伐">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.d6ad21ed.css" as="style"><link rel="preload" href="/assets/js/app.6e9ceddc.js" as="script"><link rel="preload" href="/assets/js/2.b89c4e79.js" as="script"><link rel="preload" href="/assets/js/16.eabfbb38.js" as="script"><link rel="prefetch" href="/assets/js/10.24a941b1.js"><link rel="prefetch" href="/assets/js/11.ecc2decb.js"><link rel="prefetch" href="/assets/js/12.6e897b15.js"><link rel="prefetch" href="/assets/js/13.4522ab67.js"><link rel="prefetch" href="/assets/js/14.2b37e4d9.js"><link rel="prefetch" href="/assets/js/15.2ae4b6ef.js"><link rel="prefetch" href="/assets/js/17.225c6e08.js"><link rel="prefetch" href="/assets/js/18.d57ee6e8.js"><link rel="prefetch" href="/assets/js/19.4ab1b972.js"><link rel="prefetch" href="/assets/js/20.a6fd5051.js"><link rel="prefetch" href="/assets/js/21.2b7d28a8.js"><link rel="prefetch" href="/assets/js/22.66ffd615.js"><link rel="prefetch" href="/assets/js/23.8d845ac8.js"><link rel="prefetch" href="/assets/js/24.6052b0f7.js"><link rel="prefetch" href="/assets/js/25.7e8b029b.js"><link rel="prefetch" href="/assets/js/26.ec6ebf66.js"><link rel="prefetch" href="/assets/js/27.471e3f8b.js"><link rel="prefetch" href="/assets/js/28.4357cd0c.js"><link rel="prefetch" href="/assets/js/29.aa1e3cad.js"><link rel="prefetch" href="/assets/js/3.2e436023.js"><link rel="prefetch" href="/assets/js/4.74e889c3.js"><link rel="prefetch" href="/assets/js/5.9fcf5c5a.js"><link rel="prefetch" href="/assets/js/6.726f95eb.js"><link rel="prefetch" href="/assets/js/7.5211404d.js"><link rel="prefetch" href="/assets/js/8.3b56f1c1.js"><link rel="prefetch" href="/assets/js/9.c76e67e7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d6ad21ed.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">修</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/front-end/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/books/" class="nav-link router-link-active">
+  书
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="旅途" class="dropdown-title"><span class="title">旅途</span> <span class="arrow down"></span></button> <button type="button" aria-label="旅途" class="mobile-dropdown-title"><span class="title">旅途</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/daily-record/" class="nav-link">
+  每日记录
+</a></li><li class="dropdown-item"><!----> <a href="/fitness/" class="nav-link">
+  健身&amp;营养学
+</a></li><li class="dropdown-item"><!----> <a href="/movie-perception/" class="nav-link">
+  观影有感
+</a></li><li class="dropdown-item"><!----> <a href="/anime/" class="nav-link">
+  动漫
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我" class="dropdown-title"><span class="title">关于我</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我" class="mobile-dropdown-title"><span class="title">关于我</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about-me/" class="nav-link">
+  介绍
+</a></li><li class="dropdown-item"><!----> <a href="https://juntingliu.github.io/resume/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简历
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://github.com/JuntingLiu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/front-end/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/books/" class="nav-link router-link-active">
+  书
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="旅途" class="dropdown-title"><span class="title">旅途</span> <span class="arrow down"></span></button> <button type="button" aria-label="旅途" class="mobile-dropdown-title"><span class="title">旅途</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/daily-record/" class="nav-link">
+  每日记录
+</a></li><li class="dropdown-item"><!----> <a href="/fitness/" class="nav-link">
+  健身&amp;营养学
+</a></li><li class="dropdown-item"><!----> <a href="/movie-perception/" class="nav-link">
+  观影有感
+</a></li><li class="dropdown-item"><!----> <a href="/anime/" class="nav-link">
+  动漫
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我" class="dropdown-title"><span class="title">关于我</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我" class="mobile-dropdown-title"><span class="title">关于我</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about-me/" class="nav-link">
+  介绍
+</a></li><li class="dropdown-item"><!----> <a href="https://juntingliu.github.io/resume/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简历
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://github.com/JuntingLiu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/books/" aria-current="page" class="sidebar-link">介绍</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>深入理解 ES6</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/books/understanding-es6/01-Block-Bindings.html" class="sidebar-link">块级作用域绑定</a></li><li><a href="/books/understanding-es6/02-Strings-and-Regular-Expressions.html" class="sidebar-link">字符串和正则表达式</a></li><li><a href="/books/understanding-es6/03-Functions.html" class="sidebar-link">函数</a></li><li><a href="/books/understanding-es6/04-Objects.html" class="sidebar-link">扩展对象的功能性</a></li><li><a href="/books/understanding-es6/05-Destructuring.html" aria-current="page" class="active sidebar-link">解构：使数据访问更便捷</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="解构-使数据访问更便捷"><a href="#解构-使数据访问更便捷" class="header-anchor">#</a> 解构：使数据访问更便捷</h1> <p>解构，是一种打破数据结构，将其拆分为更小部分的过程，简化获取信息的过程。</p> <p>解构语法采用的是熟悉的 &quot;<strong>对象和数组字面量的语法</strong>&quot;</p> <h2 id="对象解构"><a href="#对象解构" class="header-anchor">#</a> 对象解构</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">sex</span><span class="token operator">:</span> <span class="token string">'Sexy Man'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> sex <span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment">// Junting</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sex<span class="token punctuation">)</span> <span class="token comment">// Sexy Man</span>
+</code></pre></div><p><strong>不要忘记初始化程序</strong></p> <p><strong>初始化程序</strong>也就是<strong>等号右侧的值</strong>，是变量容器拥有一个初始值的过程, <strong>等号右侧的值</strong>不能是 <strong>null</strong> 或 <strong>undefined</strong>。</p> <p>使用 <code>var</code>、<code>let</code> 或 <code>const</code> 解构声明变量必须提供初始化程序，否则抛出语法错误。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 以下都会抛出语法错误</span>
+<span class="token keyword">var</span> <span class="token punctuation">{</span>name<span class="token punctuation">,</span> age <span class="token punctuation">}</span>
+<span class="token keyword">let</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> age <span class="token punctuation">}</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> age <span class="token punctuation">}</span>
+</code></pre></div><p>不使用解构功能，则 <code>var</code> 和 <code>let</code> 声明不强制要求提供初始化程序，但 <code>const</code> 声明，无论如何都必须提供初始化程序。</p> <h3 id="解构赋值"><a href="#解构赋值" class="header-anchor">#</a> 解构赋值</h3> <p><strong>变量赋值时也可以使用解构语法：</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">sex</span><span class="token operator">:</span> <span class="token string">'Sexy Man'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+name <span class="token operator">=</span> <span class="token string">'Twitch'</span><span class="token punctuation">,</span>
+age <span class="token operator">=</span> <span class="token number">17</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 给多个变量赋值, 必须使用小括号包裹</span>
+<span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">,</span> age <span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment">// Junting</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span> <span class="token comment">// 18</span>
+</code></pre></div><blockquote><p>⚠️ 注意</p> <p>使用解构语法对变量赋值，必须要用一堆小括号包裹解构赋值语句。
+因为 <strong>JavaScript</strong> 引擎将一对开放的花括号视为一个代码块，而语法规定，代码块语句不允许出现在赋值语句左侧，添加小括号后可以将块语句转化为一个表达式，从而实现整个解构赋值的过程。</p></blockquote> <p>解构赋值表达式的值与表达式右侧（ = 右侧）的值相等，如此一来，在任何可以使用值的地方都可以使用解构赋值表达式。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">sex</span><span class="token operator">:</span> <span class="token string">'Sexy Man'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+name <span class="token operator">=</span> <span class="token string">'Twitch'</span><span class="token punctuation">,</span>
+age <span class="token operator">=</span> <span class="token number">17</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">outputInfo</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'val === person'</span><span class="token punctuation">,</span> val <span class="token operator">===</span> person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 给函数传递参数中使用解构赋值，传递参数的同时对变量 name、age 重新赋值</span>
+<span class="token function">outputInfo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>name<span class="token punctuation">,</span> age<span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// true</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Junting</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 18</span>
+</code></pre></div><h3 id="默认值"><a href="#默认值" class="header-anchor">#</a> 默认值</h3> <p>解构赋值中，如果指定的局部变量名称在对象中不存在，那么这个局部变量会被赋值为 <strong>undefiend</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">sex</span><span class="token operator">:</span> <span class="token string">'Sexy Man'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> like<span class="token punctuation">,</span>  hobby <span class="token operator">=</span> <span class="token string">'cartoon'</span><span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>like<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;undefined&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hobby<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'carton' // 默认值</span>
+</code></pre></div><h3 id="非同名局部变量赋值"><a href="#非同名局部变量赋值" class="header-anchor">#</a> 非同名局部变量赋值</h3> <p>解构赋值使用的都是与对象属性同名的局部变量，现在想使用不同名的局部变量来存储对象属性的值。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">sex</span><span class="token operator">:</span> <span class="token string">'Sexy Man'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> firstName <span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>firstName<span class="token punctuation">)</span> <span class="token comment">// 'Junting'</span>
+
+<span class="token comment">// 使用不同名变量进行解构赋值，设定默认值</span>
+<span class="token keyword">let</span> <span class="token punctuation">{</span> <span class="token literal-property property">like</span><span class="token operator">:</span> hobby <span class="token operator">=</span> <span class="token string">'Coding'</span> <span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hobby<span class="token punctuation">)</span> <span class="token comment">// Coding</span>
+</code></pre></div><h3 id="嵌套对象解构"><a href="#嵌套对象解构" class="header-anchor">#</a> 嵌套对象解构</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">sex</span><span class="token operator">:</span> <span class="token string">'Sexy Man'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">info</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">education</span><span class="token operator">:</span> <span class="token string">'Undergraduate'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">graduateFrom</span><span class="token operator">:</span> <span class="token string">'2015'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> <span class="token literal-property property">info</span><span class="token operator">:</span> <span class="token punctuation">{</span> education<span class="token punctuation">,</span> graduateFrom <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment">// Junting</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>education<span class="token punctuation">)</span> <span class="token comment">// Undergraduate</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>graduateFrom<span class="token punctuation">)</span> <span class="token comment">// 2015</span>
+
+<span class="token comment">// 嵌套里也支持存储不同名的变量，和设置默认值</span>
+<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">info</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">education</span><span class="token operator">:</span> school <span class="token operator">=</span> <span class="token string">'ssss'</span><span class="token punctuation">,</span> <span class="token literal-property property">graduateFrom</span><span class="token operator">:</span> year<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>school<span class="token punctuation">)</span> <span class="token comment">// Undergraduate</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>year<span class="token punctuation">)</span> <span class="token comment">// year</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>info<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Uncaught ReferenceError: info is not defined</span>
+</code></pre></div><p><strong>所有冒号前的标识符都代表在对象中的检索位置(不会声明任何绑定)</strong>，其右侧为被赋值的变量名；如果冒号后是花括号，则意味着要赋予的最终值嵌套在对象内部更深的层级中。</p> <blockquote><p>⚠️ 注意</p> <p>// 未声明任何的变量</p> <p>let { info: {} } = person;</p> <p>内空花括号在对象解构中语法是合法的，但是这条语句却什么都不会做。</p> <p>冒号前的标识符都代表在对象中的检索位置(不会声明任何绑定)</p></blockquote> <h2 id="数组解构"><a href="#数组解构" class="header-anchor">#</a> 数组解构</h2> <p>数组解构与对象解构的语法相比，就比较简单多了，使用的是数组字面量，且解构操作全部在数组内完成，而不是像对象字面量语法一样使用对象的命名属性。</p> <p>使用 <strong>var</strong>、<strong>let</strong> 或 <strong>const</strong> 声明数组解构的绑定时，必须要提供一个初始化程序。右侧数组解构赋值表达式的值为 <strong>null</strong> 或 <strong>undefined</strong> ，则会导致程序抛出错误。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">,</span> <span class="token string">'green'</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">[</span> firstColor<span class="token punctuation">,</span> secondColor <span class="token punctuation">]</span> <span class="token operator">=</span> colors<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>firstColor<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// red</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>secondColor<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// green</span>
+</code></pre></div><p><strong>数组解构语法中，是通过值在数组中的位置进行选取的</strong>。且可以将其存储在任意变量中,未显示声明的元素都会被直接忽略。</p> <blockquote><p>Notice:</p> <p>数组解构过程中，并不会对数组本身产生任何变化。</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">,</span> <span class="token string">'green'</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">[</span><span class="token punctuation">,</span><span class="token punctuation">,</span> thirdColor<span class="token punctuation">]</span> <span class="token operator">=</span> colors<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>thirdColor<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// blue</span>
+</code></pre></div><p>不想获取的元素，都可以通过<strong>逗号进行占位</strong> ，不需要进行对每个元素都指定变量名。</p> <h3 id="解构赋值-2"><a href="#解构赋值-2" class="header-anchor">#</a> 解构赋值</h3> <p>数组解构赋值和对象解构赋值有点区别，就是<strong>不需要用小括号包裹表达式</strong>。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">,</span> <span class="token string">'green'</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> firstColor <span class="token operator">=</span> <span class="token string">'black'</span><span class="token punctuation">,</span> secondColor <span class="token operator">=</span> <span class="token string">'purple'</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">[</span>firstColor<span class="token punctuation">,</span> secondColor<span class="token punctuation">]</span> <span class="token operator">=</span> colors<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>firstColor<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// red</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>secondColor<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// green</span>
+</code></pre></div><p><strong>数组解构语法还有一个独特的用处： 交换变量</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>b<span class="token punctuation">,</span> a<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+</code></pre></div><h3 id="默认值-2"><a href="#默认值-2" class="header-anchor">#</a> 默认值</h3> <div class="language-JavaScript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;red&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">[</span>firstColor<span class="token punctuation">,</span> secondColor <span class="token operator">=</span> <span class="token string">'green'</span><span class="token punctuation">]</span> <span class="token operator">=</span> colors<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>secondColor<span class="token punctuation">)</span> <span class="token comment">// green</span>
+</code></pre></div><p>指定位置的属性不存在也没有给予默认值的，返回都是 <strong>undefined</strong></p> <h3 id="嵌套数组解构"><a href="#嵌套数组解构" class="header-anchor">#</a> 嵌套数组解构</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'green'</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">[</span>firstColor<span class="token punctuation">,</span> <span class="token punctuation">[</span>secondColor<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> colors<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>firstColor<span class="token punctuation">)</span> <span class="token comment">// 'red'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>secondColor<span class="token punctuation">)</span> <span class="token comment">// 'green'</span>
+</code></pre></div><h3 id="不定元素"><a href="#不定元素" class="header-anchor">#</a> 不定元素</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">,</span> <span class="token string">'green'</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> <span class="token punctuation">[</span>firstColor<span class="token punctuation">,</span> <span class="token operator">...</span>restColors<span class="token punctuation">]</span> <span class="token operator">=</span> colors<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>firstColor<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'red'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>restColors<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ['green', 'blue']</span>
+</code></pre></div><p><strong>JavaScript</strong> 在设计时，就遗漏了数组的复制功能。在 <strong>ES5</strong> 中，使用的都是 <code>concat()</code> 方法来克隆数组。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">,</span> <span class="token string">'green'</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> cloneColors <span class="token operator">=</span> colors<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 通过不给 concat 方法不传递参数</span>
+</code></pre></div><p>在 <strong>ES6</strong> 中，可以通过不定元素的语法来实现克隆数组。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">,</span> <span class="token string">'green'</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">[</span><span class="token operator">...</span>cloneColors<span class="token punctuation">]</span> <span class="token operator">=</span> colors<span class="token punctuation">;</span> <span class="token comment">// 克隆</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>cloneColors<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ['red', 'green', 'blue']</span>
+</code></pre></div><p><strong>在被解构的数组中，不定元素必须为最后一个条目</strong>，在后面继续添加逗号会导致程序抛出语法错误。</p> <h2 id="混合解构"><a href="#混合解构" class="header-anchor">#</a> 混合解构</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">like</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Coding'</span><span class="token punctuation">,</span> <span class="token string">'Music'</span><span class="token punctuation">,</span> <span class="token string">'Play Game'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">info</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">school</span><span class="token operator">:</span> <span class="token string">'University of San Francisco'</span>，
+    <span class="token literal-property property">department</span><span class="token operator">:</span> <span class="token string">'computers'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">{</span> <span class="token literal-property property">like</span><span class="token operator">:</span> <span class="token punctuation">[</span>first<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token literal-property property">info</span><span class="token operator">:</span> <span class="token punctuation">{</span>school<span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>first<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Coding</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>school<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// University of San Francisco</span>
+</code></pre></div><h2 id="解构参数"><a href="#解构参数" class="header-anchor">#</a> 解构参数</h2> <p>在很多场景下，定义一个接收大量可选参数的 <strong>JavaScript</strong> 函数时，通常会创建一个可选对象，将额外的参数定义为这个对象的属性：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// options 的属性表示其他参数</span>
+<span class="token keyword">function</span> <span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> value<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  options <span class="token operator">=</span> options <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// options 设定默认值</span>
+
+  <span class="token keyword">var</span> secure <span class="token operator">=</span> options<span class="token punctuation">.</span>secure<span class="token punctuation">,</span>
+      path <span class="token operator">=</span> options<span class="token punctuation">.</span>path<span class="token punctuation">,</span>
+      domain <span class="token operator">=</span> options<span class="token punctuation">.</span>domain<span class="token punctuation">,</span>
+      expires <span class="token operator">=</span> options<span class="token punctuation">.</span>expires<span class="token punctuation">;</span>
+
+  <span class="token comment">// 设置 cookie 的代码</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token string">'userInfo'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">secure</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">expires</span><span class="token operator">:</span> <span class="token number">60000</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><code>name</code> 和 <code>value</code> 是必须参数，<code>options</code> 为可选参数，在过去的基本像上述代码来处理可选参数，这样的声明函数，无法辨识函数的预期参数，必须要阅读函数体才可以确定所有参数情况。</p> <p><strong>ES6</strong> 支持函数默认参数和解构特性后，则在定义此类函数可以更清晰地了解函数预期传入的参数。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// options 的属性表示其他参数</span>
+<span class="token keyword">function</span> <span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> value<span class="token punctuation">,</span> <span class="token punctuation">{</span>secure<span class="token punctuation">,</span> path<span class="token punctuation">,</span> domain<span class="token punctuation">,</span> expires<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 设置 cookie 的代码</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token string">'userInfo'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">secure</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">expires</span><span class="token operator">:</span> <span class="token number">60000</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>这种形式的大大简化了代码，也能更直观的查看到预期传递的参数。</p> <h3 id="解构参数必须传值"><a href="#解构参数必须传值" class="header-anchor">#</a> 解构参数必须传值</h3> <p>其上还是有一个弊端，不传递第三个可选参数，就会抛出语法错误：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token string">'userInfo'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// 程序报错</span>
+</code></pre></div><p>缺失第三个参数，第三个参数值就为 <strong>undefined</strong> ,而使用<strong>解构赋值表达式</strong>时，等号右边的值不能为 <strong>null</strong> 或 <strong>undefined</strong>，否则程序报错 。</p> <p>使用解构参数时，<strong>JavaScript</strong> 引擎实际上做了这些事情：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> value<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> <span class="token punctuation">{</span>secure<span class="token punctuation">,</span> path<span class="token punctuation">,</span> domain<span class="token punctuation">,</span> expires<span class="token punctuation">}</span> <span class="token operator">=</span> options<span class="token punctuation">;</span>
+  <span class="token comment">// 设置 cookie 的代码</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="解构参数的默认值"><a href="#解构参数的默认值" class="header-anchor">#</a> 解构参数的默认值</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> setCookieDefaults <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">secure</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">domain</span><span class="token operator">:</span> <span class="token string">'example.com'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">exprise</span><span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>Date<span class="token punctuation">.</span>now <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token number">24</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> value<span class="token punctuation">,</span> <span class="token punctuation">{</span>secure<span class="token punctuation">,</span> path<span class="token punctuation">,</span> domain<span class="token punctuation">,</span> expires<span class="token punctuation">}</span> <span class="token operator">=</span> setCookieDefaults</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 设置 cookie 的代码</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">10/21/2022, 10:13:10 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/books/understanding-es6/04-Objects.html" class="prev">
+        扩展对象的功能性
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6e9ceddc.js" defer></script><script src="/assets/js/2.b89c4e79.js" defer></script><script src="/assets/js/16.eabfbb38.js" defer></script>
+  </body>
+</html>

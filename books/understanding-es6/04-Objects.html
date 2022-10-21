@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>扩展对象的功能性 | 修</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="一步一步，似魔鬼的步伐">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.d6ad21ed.css" as="style"><link rel="preload" href="/assets/js/app.6e9ceddc.js" as="script"><link rel="preload" href="/assets/js/2.b89c4e79.js" as="script"><link rel="preload" href="/assets/js/15.2ae4b6ef.js" as="script"><link rel="prefetch" href="/assets/js/10.24a941b1.js"><link rel="prefetch" href="/assets/js/11.ecc2decb.js"><link rel="prefetch" href="/assets/js/12.6e897b15.js"><link rel="prefetch" href="/assets/js/13.4522ab67.js"><link rel="prefetch" href="/assets/js/14.2b37e4d9.js"><link rel="prefetch" href="/assets/js/16.eabfbb38.js"><link rel="prefetch" href="/assets/js/17.225c6e08.js"><link rel="prefetch" href="/assets/js/18.d57ee6e8.js"><link rel="prefetch" href="/assets/js/19.4ab1b972.js"><link rel="prefetch" href="/assets/js/20.a6fd5051.js"><link rel="prefetch" href="/assets/js/21.2b7d28a8.js"><link rel="prefetch" href="/assets/js/22.66ffd615.js"><link rel="prefetch" href="/assets/js/23.8d845ac8.js"><link rel="prefetch" href="/assets/js/24.6052b0f7.js"><link rel="prefetch" href="/assets/js/25.7e8b029b.js"><link rel="prefetch" href="/assets/js/26.ec6ebf66.js"><link rel="prefetch" href="/assets/js/27.471e3f8b.js"><link rel="prefetch" href="/assets/js/28.4357cd0c.js"><link rel="prefetch" href="/assets/js/29.aa1e3cad.js"><link rel="prefetch" href="/assets/js/3.2e436023.js"><link rel="prefetch" href="/assets/js/4.74e889c3.js"><link rel="prefetch" href="/assets/js/5.9fcf5c5a.js"><link rel="prefetch" href="/assets/js/6.726f95eb.js"><link rel="prefetch" href="/assets/js/7.5211404d.js"><link rel="prefetch" href="/assets/js/8.3b56f1c1.js"><link rel="prefetch" href="/assets/js/9.c76e67e7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d6ad21ed.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">修</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/front-end/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/books/" class="nav-link router-link-active">
+  书
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="旅途" class="dropdown-title"><span class="title">旅途</span> <span class="arrow down"></span></button> <button type="button" aria-label="旅途" class="mobile-dropdown-title"><span class="title">旅途</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/daily-record/" class="nav-link">
+  每日记录
+</a></li><li class="dropdown-item"><!----> <a href="/fitness/" class="nav-link">
+  健身&amp;营养学
+</a></li><li class="dropdown-item"><!----> <a href="/movie-perception/" class="nav-link">
+  观影有感
+</a></li><li class="dropdown-item"><!----> <a href="/anime/" class="nav-link">
+  动漫
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我" class="dropdown-title"><span class="title">关于我</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我" class="mobile-dropdown-title"><span class="title">关于我</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about-me/" class="nav-link">
+  介绍
+</a></li><li class="dropdown-item"><!----> <a href="https://juntingliu.github.io/resume/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简历
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://github.com/JuntingLiu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/front-end/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/books/" class="nav-link router-link-active">
+  书
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="旅途" class="dropdown-title"><span class="title">旅途</span> <span class="arrow down"></span></button> <button type="button" aria-label="旅途" class="mobile-dropdown-title"><span class="title">旅途</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/daily-record/" class="nav-link">
+  每日记录
+</a></li><li class="dropdown-item"><!----> <a href="/fitness/" class="nav-link">
+  健身&amp;营养学
+</a></li><li class="dropdown-item"><!----> <a href="/movie-perception/" class="nav-link">
+  观影有感
+</a></li><li class="dropdown-item"><!----> <a href="/anime/" class="nav-link">
+  动漫
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于我" class="dropdown-title"><span class="title">关于我</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于我" class="mobile-dropdown-title"><span class="title">关于我</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about-me/" class="nav-link">
+  介绍
+</a></li><li class="dropdown-item"><!----> <a href="https://juntingliu.github.io/resume/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简历
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://github.com/JuntingLiu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/books/" aria-current="page" class="sidebar-link">介绍</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>深入理解 ES6</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/books/understanding-es6/01-Block-Bindings.html" class="sidebar-link">块级作用域绑定</a></li><li><a href="/books/understanding-es6/02-Strings-and-Regular-Expressions.html" class="sidebar-link">字符串和正则表达式</a></li><li><a href="/books/understanding-es6/03-Functions.html" class="sidebar-link">函数</a></li><li><a href="/books/understanding-es6/04-Objects.html" aria-current="page" class="active sidebar-link">扩展对象的功能性</a></li><li><a href="/books/understanding-es6/05-Destructuring.html" class="sidebar-link">解构：使数据访问更便捷</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="扩展对象的功能性"><a href="#扩展对象的功能性" class="header-anchor">#</a> 扩展对象的功能性</h1> <h2 id="对象类型统一标准化"><a href="#对象类型统一标准化" class="header-anchor">#</a> 对象类型统一标准化</h2> <p>针对对象没有统一的标准，在标准中又使用不同的术语描述对象，<strong>ECMAScript 6</strong> 规范清晰定义了每一个类别的对象。</p> <p><strong>对象类别：</strong></p> <ul><li><strong>普通（Ordinary）对象</strong>  具有 <strong>Javascript</strong> 对象所有的默认内部行为。</li> <li><strong>特异（Exotic）对象</strong>  具有某些与默认行为不符的内部行为</li> <li><strong>标准（Standard）对象</strong> <strong>ECMAScript6</strong>  规范中定义的对象，例如， <strong>Array</strong>、<strong>Data</strong> 等。<strong>标准对象既可以是普通对象，也可以是特异对象。</strong></li> <li><strong>内建对象</strong>  脚本开始执行时存在于 <strong>Javascript</strong> 执行环境中的对象，所有<strong>标准对象都是内建对象。</strong></li></ul> <h2 id="对象新增的语法特性"><a href="#对象新增的语法特性" class="header-anchor">#</a> 对象新增的语法特性</h2> <h3 id="对象字面量语法扩展"><a href="#对象字面量语法扩展" class="header-anchor">#</a> 对象字面量语法扩展</h3> <p>一个对象的属性与本地变量同名时，不必再写冒号和值，简单地只写属性名即可。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">createPerson</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> sex</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">,</span>
+    age<span class="token punctuation">,</span>
+    sex
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>对象字面量里只有一个属性的名称时，<strong>JavaScript</strong> 引擎会在可访问作用域中查找其同名变量；如果找到，则变量的值被赋给对象字面量里的同名属性。</p> <h3 id="对象方法的简写"><a href="#对象方法的简写" class="header-anchor">#</a> 对象方法的简写</h3> <p>在对象字面量里添加一个对象方法，不需要在以<code>属性名: 匿名函数表达式</code> 的形式书写对象方法，可以直接省略<strong>冒号</strong>和 <strong>function</strong> 关键字。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span><span class="token punctuation">,</span>
+  <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>其定义的对象方法具有传统定义对象方法的全部特性。二者唯一的区别是，使用简写方法可以使用 <code>super</code> 关键字。</p> <blockquote><p>Topic:</p> <p>通过对象方法简写语法创建的方法有一个 <code>name</code> 属性，其值为小括号前的名称。</p> <p>上述例子中 <code>person.getName()</code> 方法的 name 属性的值为 <code>getName</code></p></blockquote> <h3 id="可计算属性名"><a href="#可计算属性名" class="header-anchor">#</a> 可计算属性名</h3> <p>对象属性名可以通过动态计算后得出属性名。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> suffix <span class="token operator">=</span> <span class="token string">&quot; name&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">[</span><span class="token string">'first'</span> <span class="token operator">+</span> suffix<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">&quot;Junting&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token string">'last'</span> <span class="token operator">+</span> suffix<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">&quot;Liu&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">full</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>suffix<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">&quot;Junting Liu&quot;</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span><span class="token string">'first name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;Junting&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span><span class="token string">'last name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;Liu&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span><span class="token string">'full name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;Junting Liu&quot;</span>
+</code></pre></div><h2 id="新增方法"><a href="#新增方法" class="header-anchor">#</a> 新增方法</h2> <h3 id="object-is-方法"><a href="#object-is-方法" class="header-anchor">#</a> Object.is() 方法</h3> <p>此方法用来弥补全等运算符的不准确运算。其运算结果在大部分情况中与 <code>===</code> 与运算符相同，<strong>唯一区别在于 <code>+0</code> 和 <code>-0</code> 被识别为不相等并且 <code>NaN</code> 与 <code>NaN</code> 等价。</strong></p> <p>是否选择用 <code>Object.is()</code> 方法而不是 <code>==</code>或<code>===</code> 取决于哪些特殊情况如何影响代码。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">+</span><span class="token number">0</span> <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token operator">+</span><span class="token number">0</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token operator">+</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+
+<span class="token number">NaN</span> <span class="token operator">==</span> <span class="token number">NaN</span><span class="token punctuation">;</span> <span class="token comment">// false</span>
+<span class="token number">NaN</span> <span class="token operator">===</span> <span class="token number">NaN</span><span class="token punctuation">;</span> <span class="token comment">// false</span>
+Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token number">NaN</span><span class="token punctuation">,</span> <span class="token number">NaN</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+
+<span class="token number">5</span> <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token number">5</span> <span class="token operator">==</span> <span class="token string">&quot;5&quot;</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token number">5</span> <span class="token operator">===</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+<span class="token number">5</span> <span class="token operator">===</span> <span class="token string">&quot;5&quot;</span><span class="token punctuation">;</span> <span class="token comment">// false</span>
+
+Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">&quot;5&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+</code></pre></div><h3 id="object-assign-方法"><a href="#object-assign-方法" class="header-anchor">#</a> Object.assign() 方法</h3> <p>用于合并对象，将源对象（source）的所有可枚举属性和方法，复制到目标对象（target）。</p> <p>在 <code>ES6</code> 之前，混合（Mixin）是  <code>JavaScript</code> 中实现对象组合最流行的一种模式。在一个 <strong>mixin</strong> 方法中，一个对象接收来自另一个对象的属性和方法，许多的 <code>JavaScript</code> 库都有类似的 <strong>mixin</strong> 方法：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">mixin</span><span class="token punctuation">(</span><span class="token parameter">receiver<span class="token punctuation">,</span> supplier</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>supplier<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    receiver<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> supplier<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> receiver<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>此上是通过赋值（<code>=</code> ）的形式来进行复制（此行为是一个浅拷贝，属性值为对象时只复制了对象的引用）。</p> <p>再来看一段代码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">EventTarget</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/*...*/</span> <span class="token punctuation">}</span>
+<span class="token class-name">EventTarget</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">constructor</span><span class="token operator">:</span> EventTarget<span class="token punctuation">,</span>
+  <span class="token function-variable function">emit</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/*...*/</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">on</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/*...*/</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> myObject <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">mixin</span><span class="token punctuation">(</span>myObject<span class="token punctuation">,</span> <span class="token class-name">EventTarget</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+myObject<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'........'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>通过 <strong>mixin</strong> 方法实现 <strong>myObject</strong> 可以分别通过 <strong>emit()</strong> 方法发布事件或通过 <strong>on()</strong> 方法订阅事件。</p> <p>这种混合模式非常流行，因而在<strong>ECMAScript 6</strong> 添加了 <code>Object.assign()</code> 方法来实现相同的功能。  <strong>mixin</strong> 方法使用的是赋值操作符来复制相关属性，<strong>不能复制访问器属性到接收对象中</strong> ，因此在 <strong>ECMAScript 6</strong> 采用的是 <strong>assign</strong> 作为方法名，而不是 <code>mixin</code>。</p> <p><strong>Object.assign() 方法复制不了访问器属性</strong></p> <p>由于 <strong>Object.assign()</strong> 方法执行的是赋值操作，因此<strong>提供者的访问器属性最终会转变为接收对象的一个数据属性</strong>。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> receiver <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> supplier <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">get</span> <span class="token function">name</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Junting'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>receiver<span class="token punctuation">,</span> supplier<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> descriptor <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span>receiver<span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+descriptor<span class="token punctuation">.</span>value <span class="token comment">// 'Junting'</span>
+descriptor<span class="token punctuation">.</span>get <span class="token comment">// undefined</span>
+</code></pre></div><h2 id="重复的对象字面量属性"><a href="#重复的对象字面量属性" class="header-anchor">#</a> 重复的对象字面量属性</h2> <p>在 <strong>ECMAScript 5</strong> 严格模式下，对象字面量属性出现重复的 <strong>key</strong> 会触发一个语法错误。</p> <p>在 <strong>ECMAScript 6</strong> 中不管是在非严格模式下还是在严格模式下代码不再检查重复属性，对于每一组的重复属性，都会选取最后一个取值。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token string">&quot;use strict&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Liu'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Junting'</span> <span class="token comment">// 在 es6 下不会报语法错误</span>
+<span class="token punctuation">}</span>
+
+person<span class="token punctuation">.</span>name<span class="token punctuation">;</span> <span class="token comment">// 'Junting'</span>
+</code></pre></div><h2 id="自有属性枚举顺序"><a href="#自有属性枚举顺序" class="header-anchor">#</a> 自有属性枚举顺序</h2> <p>在 <strong>ECMAScript 6</strong> 严格规定了对象的自由属性被枚举时的放回顺序，之前是没有的。</p> <p><strong>自由属性枚举顺序的基本规则：</strong></p> <ol><li>所有数字键按升序排序</li> <li>所有字符串键按照它们被加入对象的顺序排序</li> <li>所有 <strong>symbol</strong> 键按照它们被加入对象的顺序排序</li></ol> <p>自有属性枚举有了顺序规则后，会影响到 <strong>Object.getOwnPropertyNames() 方法</strong> 和 <strong>Reflect.ownKeys</strong> 返回属性的方式， **Object.assign() **方法处理属性的顺序也将随之改变。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token number">0</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token number">3</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token number">1</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">'junting'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+
+obj<span class="token punctuation">.</span>d <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// {0: 1, 1: 1, 3: 1, a: 1, c: 1, b: 1, d: 1, Symbol(junting): 1}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getOwnPropetyNames</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">' -&gt; '</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;0 -&gt; 1 -&gt; 3 -&gt; a -&gt; c -&gt; b -&gt; d&quot;</span>
+</code></pre></div><p>对于数字键，尽管在对象字面量中的顺序是随意的，但在枚举时会被重新组合和排序。字符串紧随数值键，并按照在对象中定义的顺序返回，所以随后动态加入的字符串也是最后输出。</p> <blockquote><p>⚠️ 注意：</p> <p>虽然  <strong>ECMAScript 6</strong>  已经明确规定了对象自由属性枚举是严格按照规则进行排序的，但对于 <code>for -in</code> 循环，由于不同的浏览器厂商对于循环的实现方式不同，因此仍为指定一个明确的枚举顺序，而 <strong>Object.keys()</strong> 方法和 <strong>JSON.stringify()</strong> 方法都指明与 <strong>for-in</strong> 使用相同的枚举顺序，所以它们的枚举顺序目前也不明晰。</p></blockquote> <h2 id="增强对象原型"><a href="#增强对象原型" class="header-anchor">#</a> 增强对象原型</h2> <h3 id="改变对象的原型"><a href="#改变对象的原型" class="header-anchor">#</a> 改变对象的原型</h3> <p>正常情况下，无论是通过构造函数还是 <strong>Object.create()</strong> 方法创建对象，其原型是在对象被创建时指定的。对象原型在实例化之后保持不变，直到 <strong>ECMAScript 5</strong> 都是 <strong>JavaScript</strong> 编程最重要的设定之一，虽然在 <strong>ECMAScript 5</strong> 中添加了 <strong>Object.getPrototypeOf()</strong> 方法来返回任意指定对象的原型，但仍然缺少对象在实例化后改变原型的标准方法。</p> <p><strong>ECMAScript 6</strong> 中添加了 <strong>Object.setPrototypeOf()</strong> 方法来改变这一现状，通过这个方法可以改变任意指定对象的原型, 它接收两个参数：<strong>被改变原型的对象及替代第一个参数原型的对象</strong>。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> dog <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Woff'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 以 person 对象为原型</span>
+<span class="token keyword">let</span> friend <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;Hello&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">)</span> <span class="token operator">===</span> person<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+
+<span class="token comment">// 将原型设置为 dog</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">,</span> dog<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;Woff&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">)</span> <span class="token operator">===</span> dog<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+</code></pre></div><p>对象原型的真实值被储存在内部专有属性 <strong>[[Prototype]]</strong> 中，调用 <strong>Object.getPrototypeOf()</strong> 方法返回存储在其中的值，调用 **Object。setPrototypeOf()**方法改变其中的值。这不是操作 <strong>[[Prototype]]</strong> 值的唯一方法。</p> <h3 id="简化原型访问的-super-引用"><a href="#简化原型访问的-super-引用" class="header-anchor">#</a> 简化原型访问的 Super 引用</h3> <p><strong>ECMAScript 6</strong> 引入了 <strong>Super</strong> 引用特性，使用它可以更便捷地访问对象原型。</p> <p><strong>Super</strong> 引用必须在使用简写方法的对象中使用，如果在其他方法声明中使用会导致语法错误。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> dog <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Woff'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> friend <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 正常使用</span>
+    <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">', Hi!'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 错误示例</span>
+friend <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">getGreeting</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 语法错误</span>
+    <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">', Hi!'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">,</span> person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>过去想要实现继承的方式就比较繁琐，而且在<strong>多重继承的场景</strong>下会出现一些问题。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> dog <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Woff'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> friend <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">', Hi!'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 将原型设置为 person</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">,</span> person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;Hello, Hi!&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">)</span> <span class="token operator">===</span> person<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+
+<span class="token comment">// 原型设置为 dog</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">,</span> dog<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;Woff, Hi!&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">)</span> <span class="token operator">===</span> dog<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+</code></pre></div><p>其上使用 <code>Object.getPrototypeOf(this)</code> 方法确保继承的原型（<code>person</code>），<code>.call(this)</code>  用来确保被继承者的 <code>this</code> 值 （<code>friend</code>）。从而实现继承父级方法并重写方法。</p> <p><strong>弊端：</strong></p> <p>多重继承</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> relative <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>friend<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;Hello&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;Hello, Hi!&quot;;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>relative<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Uncaught RangeError: Maximum call stack size exceeded</span>
+</code></pre></div><p><strong>this</strong> 是 <strong>relative</strong> , <strong>relative</strong> 的原型是 <strong>friend</strong> 对象，当执行  <strong>relative</strong> 的 <strong>getGreeting</strong> 方法时， <code>Object.getPrototypeOf(this).getGreeting.call(this)</code> 调用的是 <strong>friend</strong> 的 <code>getGreeting</code>方法，而此时的 <code>this</code> 值为 <strong>relative</strong> , 这样 <strong>Object.getPrototypeOf(this)</strong> 又会返回 <strong>friend</strong> 对象。所以就会<strong>进入递归调用知道触发栈溢出报错</strong>。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> dog <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Woff'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> friend <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">', Hi!'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 将原型设置为 person</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">,</span> person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> relative <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>friend<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;Hello&quot;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;Hello, Hi!&quot;;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>relative<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Uncaught RangeError: Maximum call stack size exceeded</span>
+</code></pre></div><p>使用 <strong>Super 引用</strong>，就不会导致这个错误了，因为  <strong>Super 引用</strong>不是动态的变化的，它总是指向正确的对象，上述这个例子, 无论多少方法继承了 <strong>getGreeting</strong> 方法，<strong>super.getGreeting()</strong> 指向的永远是 <strong>person.getGreeting()</strong>。</p> <h3 id="正式的方法定义"><a href="#正式的方法定义" class="header-anchor">#</a> 正式的方法定义</h3> <p>在 <strong>ECMAScript 6</strong> 中正式将方法定义为一个函数，之前对于 &quot;方法&quot; 的定义仅仅是一个具有功能而非数据的对象属性。</p> <p>在对象中定义的方法它会有一个内部的 <strong>[[HomeObject]]</strong> 属性来容纳这个方法从属的对象。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 是方法</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 不是方法</span>
+<span class="token keyword">function</span> <span class="token function">shareGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token string">'Hi!'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>getGreeting()</strong> 方法的 <strong>[[HomeObject]]</strong> 属性值为 <strong>person</strong> 。<strong>shareGreeting()</strong> 函数并不是赋值给一个对象，所以没有  <strong>[[HomeObject]]</strong> 属性。</p> <p>此属性在使用 <strong>Super</strong> 引用时就变的很有用了。<strong>Super</strong> 的所有引用都是通过  <strong>[[HomeObject]]</strong>  属性来确定后续的运行过程。第一步是在  <strong>[[HomeObject]]</strong> 属性上调用 <strong>Object.getPrototypeOf()</strong> 方法来检查原型的引用；然后搜寻原型找到同名函数；最后，设置 <strong>this</strong> 绑定并且调用相应的方法。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Hello'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> friend <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">', Hi!'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 将原型设置为 person</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>friend<span class="token punctuation">,</span> person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span><span class="token function">getGreeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'Hello, Hi!'</span>
+</code></pre></div><p>调用 <strong>friend.getGreeting()</strong> 方法会将  <strong>person.getGreeting()</strong> 的放回值与 <code>', Hi!'</code> 拼接成新的字符串并返回。 <strong>friend.getGreeting()</strong> 方法的   <strong>[[HomeObject]]</strong> 属性值 <strong>friend</strong> , <strong>friend</strong> 的原型是 <strong>person</strong> ,所以 <strong>super.getGreeting()</strong> 等价于 <strong>person.getGreeting.call(this)</strong> 。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">10/21/2022, 10:13:10 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/books/understanding-es6/03-Functions.html" class="prev">
+        函数
+      </a></span> <span class="next"><a href="/books/understanding-es6/05-Destructuring.html">
+        解构：使数据访问更便捷
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6e9ceddc.js" defer></script><script src="/assets/js/2.b89c4e79.js" defer></script><script src="/assets/js/15.2ae4b6ef.js" defer></script>
+  </body>
+</html>
